@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Comments</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> <!-- Google Font -->
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- FontAwesome for social media icons -->
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="biodata.html">My Biodata</a></li>
+            <li><a href="portfolio.html">My Portfolio</a></li>
+            <li><a href="video.html">My Video</a></li>
+            <li><a href="comments.html">Your Comments</a></li>
+        </ul>
+    </nav>
+
+<!-- Feedback Section -->
+<section class="card-container">
+    <div class="comment-bubble">
+        <h3>We’d Love Your Feedback!</h3>
+        <p>Please leave your feedback below and let us know your thoughts. Your comments help me improve and grow!</p>
+        <form action="#" method="POST">
+            <div class="form-field">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-field">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-field">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Your feedback here..."></textarea>
+            </div>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+
+    <!-- Social Media Contact Bubble -->
+    <div class="social-media-bubble">
+        <h3>Contact Me on Social Media</h3>
+        <p>Follow or message me on TikTok and Instagram!</p>
+        <div class="social-icons">
+            <a href="https://www.tiktok.com/@nnaaaaaca" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/nnaaaaaca/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</section>
+
+    <!-- Back to Top Button -->
+    <a href="#top" class="back-to-top">↑ Back to Top</a>
+</body>
+</html>

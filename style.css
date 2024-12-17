@@ -1,0 +1,503 @@
+/* Flash animation */
+@keyframes flash {
+    0% {
+        opacity: 1;
+        color: #FBE9D0; /* Creamy Beige */
+    }
+    50% {
+        opacity: 0.5;
+        color: #E64833; /* Deep Red */
+    }
+    100% {
+        opacity: 1;
+        color: #FBE9D0; /* Creamy Beige */
+    }
+}
+
+/* Apply flash animation to the welcome message */
+.welcome-message h1 {
+    animation: flash 1s ease-in-out infinite;
+}
+
+.welcome-message p {
+    animation: flash 1.5s ease-in-out infinite;
+}
+
+/* Apply flash animation to navigation links */
+nav ul li a:hover {
+    animation: flash 0.5s ease-in-out;
+    color: #E64833; /* Deep Red */
+}
+
+/* General Styles */
+body {
+    background: #FBE9D0; /* Creamy Beige */
+    color: #244855; /* Deep Teal */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+/* Navigation Bar */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background: #244855; /* Deep Teal */
+    padding: 15px;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FBE9D0; /* Creamy Beige */
+    font-weight: 600;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #E64833; /* Deep Red */
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+}
+
+/* Bubbles */
+.about-bubble, .biodata-bubble, .portfolio-bubble, .video-bubble, .comment-bubble {
+    background: #90AEAD; /* Muted Teal */
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.about-bubble:hover,
+.biodata-bubble:hover,
+.portfolio-bubble:hover,
+.video-bubble:hover,
+.comment-bubble:hover {
+    transform: translateY(-5px);
+    background: #E64833; /* Deep Red */
+    color: #244855; /* Deep Teal */
+    transition: 0.3s;
+}
+
+/* Profile Photo */
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Image Row for Side-by-Side Layout */
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.image-row img {
+    width: 45%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #E64833; /* Deep Red */
+    color: #FBE9D0; /* Creamy Beige */
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 200;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    transition: background 0.3s ease;
+}
+
+.back-to-top:hover {
+    background: #244855; /* Deep Teal */
+    color: #FBE9D0; /* Creamy Beige */
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Form Styling */
+#contact-form {
+    background-color: #90AEAD; /* Muted Teal */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form .form-field {
+    margin-bottom: 20px;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#contact-form button {
+    background-color: #E64833; /* Deep Red */
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact-form button:hover {
+    background-color: #F57251; /* Peachy Orange */
+}
+
+/* Ensure .card-container is a flex container */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    padding: 80px 20px 20px; /* Adds top padding to avoid overlap with the fixed navigation bar */
+}
+
+/* Centering text inside the .welcome-message */
+.welcome-message {
+    text-align: center; /* Centers text horizontally */
+    max-width: 800px; /* Optional: controls the width of the welcome message */
+}
+
+/* Additional styling for readability */
+.welcome-message h1 {
+    font-size: 2.5rem; /* Example size */
+    margin-bottom: 20px; /* Adds spacing below the title */
+}
+
+.welcome-message p {
+    font-size: 1.25rem; /* Example size */
+    margin-bottom: 20px; /* Adds spacing below the paragraph */
+}
+
+.welcome-message blockquote {
+    font-size: 1.5rem; /* Example size */
+    font-style: italic;
+    color: #555; /* Optional: adds a nice gray color */
+    margin-top: 20px; /* Adds spacing above the quote */
+}
+
+/* Timetable Table Styling */
+.biodata-bubble {
+    background: #90AEAD; /* Muted Teal */
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    overflow: hidden; /* Prevent overflow */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed; /* Ensures equal column widths */
+    overflow-x: auto; /* Allows horizontal scrolling if the table is too wide */
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #E64833; /* Deep Red border for the table */
+    height: 50px; /* Ensures each row is the same height */
+}
+
+th {
+    background-color: #F57251; /* Peachy Orange */
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    background-color: #E0DBD8; /* Light Gray */
+}
+
+tbody tr:nth-child(odd) td {
+    background-color: #FAF5F1; /* White Fog for odd rows */
+}
+
+tbody tr:hover {
+    background-color: #E64833; /* Deep Red for hover */
+    color: white;
+}
+
+
+/* Optional: Add some spacing between the table and the surrounding elements */
+.biodata-bubble table {
+    margin-top: 20px;
+}
+
+/* Portfolio Section Bubble */
+.portfolio-bubble {
+    background: #90AEAD; /* Muted Teal */
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 400px;  /* Ensure the width of the bubble is set */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+    margin-bottom: 30px; /* Space between the bubbles */
+    overflow: hidden;  /* Prevents images or other elements from overflowing the bubble */
+}
+
+/* Hover Effect for Portfolio Bubble */
+.portfolio-bubble:hover {
+    transform: translateY(-5px);
+    background: #E64833; /* Deep Red */
+    color: #244855; /* Deep Teal */
+    transition: 0.3s;
+}
+
+/* Image Row for Side-by-Side Images Inside the Bubbles */
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;  /* Allow images to wrap to the next line if needed */
+}
+
+/* Image Styling Inside the Row */
+.image-row img {
+    width: 45%;  /* Adjusted width to make images fit well inside the bubble */
+    height: auto;  /* Maintain aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Adds a subtle shadow */
+    object-fit: cover;  /* Ensures images cover the allocated space without distortion */
+}
+
+/* Paragraph Styling Inside the Bubbles */
+.portfolio-bubble p {
+    margin-top: 20px; /* Adds space above the paragraph */
+    font-size: 1rem;
+    color: #244855; /* Deep Teal for readability */
+}
+
+/* Add some spacing between sections */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /* Space between the two bubbles */
+    padding: 30px;
+}
+
+/* Video Bubble Styling */
+.video-bubble {
+    background: #90AEAD; /* Muted Teal */
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 800px; /* Controls the width of the bubble */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px; /* Space between the bubbles */
+    margin-top: 20px; /* Optional: add some spacing from the top of the page */
+}
+
+.video-bubble h3 {
+    font-size: 1.75rem; /* Adjusts the size of the header */
+    margin-bottom: 20px; /* Adds space between the header and the video */
+}
+
+/* Ensure the video stays inside the bubble */
+.video-container {
+    width: 100%; /* Full width of its parent container */
+    max-width: 560px; /* Limit the width to avoid too large video */
+    margin: 0 auto; /* Center the video container */
+}
+
+.video-container video {
+    width: 100%; /* Makes the video responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for the video */
+}
+
+/* Optional: You can add a hover effect on the video bubble if desired */
+.video-bubble:hover {
+    transform: translateY(-5px);
+    background: #E64833; /* Deep Red */
+    color: #244855; /* Deep Teal */
+    transition: 0.3s;
+}
+
+/* Feedback Section Styling */
+.comment-bubble {
+    background: #90AEAD; /* Muted Teal */
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 600px; /* Optional: controls the width of the bubble */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+/* Form Field Styling */
+.form-field {
+    margin-bottom: 15px; /* Adds space between each form field */
+    text-align: left; /* Align labels and inputs to the left */
+}
+
+/* Ensuring the input fields (name, email) are the same size */
+input[type="text"], input[type="email"], textarea {
+    width: 100%; /* Makes the input fields take the full width of their container */
+    padding: 10px; /* Adds padding inside the input fields */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ccc; /* Light border */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+/* For the text area */
+textarea {
+    resize: vertical; /* Allows resizing vertically, but not horizontally */
+    min-height: 150px; /* Ensures the text area is tall enough */
+}
+
+/* Styling for the label to make sure it is positioned correctly */
+label {
+    font-weight: bold;
+    margin-bottom: 5px; /* Adds space between label and input */
+    display: block; /* Ensures the label is displayed above the input field */
+}
+
+/* Submit button styling */
+button {
+    background-color: #E64833; /* Deep Red */
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #F57251; /* Peachy Orange */
+}
+
+/* Mobile First Approach */
+
+/* For mobile devices (up to 600px) */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px; /* Smaller font size for mobile devices */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack the nav items vertically on mobile */
+        padding: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Space between items */
+    }
+
+    .card-container {
+        flex-direction: column; /* Stack cards vertically */
+        gap: 10px; /* Less gap on smaller screens */
+    }
+
+    .profile-photo {
+        width: 120px;
+        height: 120px; /* Smaller profile photo on mobile */
+    }
+
+    .image-row img {
+        width: 100%; /* Make images full-width in the row */
+        height: auto;
+    }
+
+    .welcome-message h1 {
+        font-size: 1.8rem; /* Smaller heading for mobile */
+    }
+
+    .welcome-message p {
+        font-size: 1rem; /* Adjust text size */
+    }
+
+    .video-container {
+        max-width: 100%; /* Ensure video container takes full width */
+    }
+
+    .form-field input,
+    .form-field textarea {
+        font-size: 14px; /* Smaller font size inside inputs */
+    }
+
+    .back-to-top {
+        font-size: 12px; /* Smaller back-to-top button on mobile */
+    }
+}
+
+/* For tablets (601px to 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .card-container {
+        flex-direction: row; /* Align cards horizontally on tablets */
+        justify-content: space-between; /* Distribute cards with space */
+        gap: 20px;
+    }
+
+    .image-row img {
+        width: 48%; /* Images take less width, 2 per row */
+    }
+
+    .profile-photo {
+        width: 130px;
+        height: 130px; /* Slightly bigger profile photo */
+    }
+
+    .back-to-top {
+        font-size: 14px;
+    }
+}
+
+/* For larger screens (desktops) */
+@media (min-width: 901px) {
+    .card-container {
+        gap: 30px; /* Bigger gap between cards on larger screens */
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px; /* Profile photo on large screens */
+    }
+
+    .image-row img {
+        width: 45%; /* 2 images per row */
+    }
+}
